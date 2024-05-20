@@ -1,0 +1,17 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black",
+    "python.sortImports.executable": "isort",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "sortImports.executable": "isort",
+        "linting.flake8Args": [
+            "--config=pyproject.toml"
+        ]
+    },
+    "pylint.args": [
+        "--rcfile=.pylintrc"
+    ]
+}

@@ -1,0 +1,2 @@
+[MESSAGES CONTROL]
+disable=C0301, unnecessary-semicolon, missing-docstring

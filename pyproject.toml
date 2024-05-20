@@ -1,0 +1,24 @@
+[tool.black]
+line-length = 88
+target-version = ['py311']  # Adjust according to your Python version
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 120  # Adjust line length as needed
+ignore = "E501"  # E501 is the code for line too long in flake8
