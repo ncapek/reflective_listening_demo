@@ -206,7 +206,7 @@ class LLMAgent:
         Returns:
             str: The evaluation of the conversation.
         """
-        prompt = f"Please write a very short and specific evaluation. The <user> is a human training their reflective listening skills against a chatbot: Context: {conversation.context} Conversation: {conversation.format_messages_for_prompt()}"
+        prompt = f"Please write a very short and specific evaluation. The <user> is a human training their reflective listening skills against a chatbot. The chatbot is programmed to open up if the user utilized reflective listening and react neutrally or even hostilely otherwise: Context: {conversation.context} Conversation: {conversation.format_messages_for_prompt()}"
         response = openai.chat.completions.create(
             model=model,
             messages=[{"role": "assistant", "content": prompt}],
