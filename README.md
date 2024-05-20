@@ -15,6 +15,8 @@ Streamlit: For the frontend to quickly design and deploy.
 MongoDB Atlas: For simple data persistence.
 OpenAI’s GPT: I'm currently using GPT4 to generate agent responses and conversation evaluations.
 
+## General
+
 The chatbot helps users practice and enhance their reflective listening skills by engaging in simulated dialogues. The agent has something it wants to share with the user but is careful about approaching the subject. And depending on how the user reacts, the agent decides if it's safe to share its problems.
 
 I’m looking forward to your feedback and thoughts.🌍💬
