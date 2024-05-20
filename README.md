@@ -26,7 +26,7 @@ I’m looking forward to your feedback and thoughts.🌍💬
 Notes:
 Since I am calling the OpenAI API, I have set an upper limit on the maximum daily conversations, so the app might be down at times.
 
-Project link: https://ncapek-reflective-listening-prototype-streamlit-app-nxuzqe.streamlit.app/
+Project link: https://reflectivelisteningpracticechatbot.streamlit.app/
 
 Resources: 
 https://www.youtube.com/watch?v=tIATzLf-y04
