@@ -11,9 +11,11 @@ Inspired by this, I decided investigate if we can use AI to help people build th
 
 ## Tech Stack:
 
-Streamlit: For the frontend to quickly design and deploy.
-MongoDB Atlas: For simple data persistence.
-OpenAI’s GPT: I'm currently using GPT4 to generate agent responses and conversation evaluations.
+- Streamlit: For the frontend to quickly design and deploy.
+
+- MongoDB Atlas: For simple data persistence.
+
+- OpenAI’s GPT: I'm currently using GPT4 to generate agent responses and conversation evaluations.
 
 ## General
 
