@@ -115,6 +115,7 @@ class Conversation:
             "context": self.context,
             "user_visible_context": self.user_visible_context,
             "num_of_messages_sent_by_agent": self.num_of_messages_sent_by_agent,
+            "evaluation": self.evaluation,
         }
 
     @staticmethod
