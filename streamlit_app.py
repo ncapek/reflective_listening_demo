@@ -106,18 +106,22 @@ st.text_area(
     key="conversation_display",
 )
 
-# Display the true context and restart button when the conversation is finished
 if conversation.finished:
-    persistence_manager = MongoPersistence(st.secrets["MONGO_CONNECTION_STRING"])
+    if "logged" not in st.session_state:
+        persistence_manager = MongoPersistence(st.secrets["MONGO_CONNECTION_STRING"])
+        persistence_manager.save_conversation(conversation)
+        st.session_state["logged"] = True  # Set the flag to prevent re-logging
+
     st.subheader("True Context of the Conversation")
     st.write(conversation.context)
 
-    evaluation = llm_agent.evaluate_conversation(conversation, "gpt-4-turbo", 0.5)
-    conversation.evaluation = evaluation
-    st.subheader("Evaluation of Your Reflective Listening Skills:")
-    st.write(evaluation)
-    persistence_manager.save_conversation(conversation)
+    if "evaluation" not in st.session_state:
+        evaluation = llm_agent.evaluate_conversation(conversation, "gpt-4-turbo", 0.5)
+        conversation.evaluation = evaluation
+        st.session_state["evaluation"] = (
+            evaluation  # Save evaluation to prevent re-computation
+        )
 
-    if st.button("Start a new conversation"):
-        init_conversation()
-        st.experimental_rerun()
+    st.subheader("Evaluation of Your Reflective Listening Skills:")
+    st.write(st.session_state["evaluation"])
+    st.subheader("To start a new conversation, please refresh the page.")
